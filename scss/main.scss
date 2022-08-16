@@ -1,0 +1,119 @@
+@import './variables';
+@import './importable';
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $mainBG;
+    @include flexcenter(column);
+    font-family: 'Montserrat';
+    height: 100vh;
+
+    @include mobile{
+        width: 100%;
+    }
+}
+.card{
+    width: 100%;
+    max-width: 300px;
+    background-color:$cardBG;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    
+
+    .nft_img{
+        position: relative;
+        background-image: url(/images/image-equilibrium.jpg);
+        width: 280px;
+        height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+
+
+        &:hover{
+            cursor: pointer;
+            background-color:hsla(178, 100%, 50%,.5);
+            background-blend-mode: overlay;
+            
+        }
+    }
+
+     h3{
+        color: $White;
+        text-transform: capitalize;
+        font-family: 'Montserrat';
+    }
+
+     p{
+        color: $Softblue;
+        font-size: 18px;
+
+    }
+
+     .section4{
+        display: flex;
+        justify-content: space-between;
+    }
+     .ethereum{
+        display: flex;
+        gap: 7px;
+        
+        & h3{
+            color: $Cyan
+        }
+    }
+    .count-down{
+        @extend .ethereum;
+        align-items: flex-start
+    }
+
+     footer{
+        @extend .ethereum;
+        align-items: center;
+        margin-top: 10px;
+        padding-top: 19px;
+        border-top: 1px solid $line;
+
+        & img{
+            border: 1px solid $White;
+            border-radius: 50%;
+           
+        }
+        & span{
+            font-weight: map-get($font-weights, bold);
+        }
+    }
+}
+
+
+span:hover, h3:hover{
+    color: $Cyan;
+}
+
+.nft_img::after{
+    content: '';
+    position: absolute;
+    background-image: url(/images/icon-view.svg);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 50px;
+    left: 40%;
+    top: 40%;
+    display: none;
+}
+.nft_img:hover::after{
+    display: block;
+}
+

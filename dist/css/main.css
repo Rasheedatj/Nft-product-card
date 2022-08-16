@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat";
+  height: 100vh;
+}
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card .nft_img {
+  position: relative;
+  background-image: url(/images/image-equilibrium.jpg);
+  width: 280px;
+  height: 260px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.card .nft_img:hover {
+  cursor: pointer;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  background-blend-mode: overlay;
+}
+.card h3 {
+  color: hsl(0deg, 0%, 100%);
+  text-transform: capitalize;
+  font-family: "Montserrat";
+}
+.card p {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 18px;
+}
+.card .section4 {
+  display: flex;
+  justify-content: space-between;
+}
+.card .ethereum, .card footer, .card .count-down {
+  display: flex;
+  gap: 7px;
+}
+.card .ethereum h3, .card footer h3, .card .count-down h3 {
+  color: hsl(178deg, 100%, 50%);
+}
+.card .count-down {
+  align-items: flex-start;
+}
+.card footer {
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 19px;
+  border-top: 1px solid hsl(215deg, 32%, 27%);
+}
+.card footer img {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.card footer span {
+  font-weight: 600;
+}
+
+span:hover, h3:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.nft_img::after {
+  content: "";
+  position: absolute;
+  background-image: url(/images/icon-view.svg);
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 50px;
+  left: 40%;
+  top: 40%;
+  display: none;
+}
+
+.nft_img:hover::after {
+  display: block;
+}/*# sourceMappingURL=main.css.map */
