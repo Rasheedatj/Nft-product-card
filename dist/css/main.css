@@ -33,7 +33,7 @@ body {
 }
 .card .nft_img {
   position: relative;
-  background-image: url(/images/image-equilibrium.jpg);
+  background-image: url("../images/image-equilibrium.jpg");
   width: 280px;
   height: 260px;
   background-size: cover;
@@ -89,7 +89,7 @@ span:hover, h3:hover {
 .nft_img::after {
   content: "";
   position: absolute;
-  background-image: url(/images/icon-view.svg);
+  background-image: url("../images/icon-view.svg");
   background-repeat: no-repeat;
   width: 150px;
   height: 50px;
